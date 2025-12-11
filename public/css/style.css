@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F2F1EC;
+}
+
+header{
+    width: 100%;
+    height: 120px;
+    background-color: #365B6D;
+}
+
+ /* --------------------------- Parte do Video ---------------------------  */
+
+.main_Video{
+    /* width: 392px;
+    height: 254px; */
+    display: none;
+}
+.texto-e-video{
+    display: flex;
+}
+
+.ex-video{
+    margin: 60px 0px 0px 50px;
+    border-radius: 52px;
+    background: #D9D9D9;
+    width: 392px;
+    height: 254px;
+}
+
+.main_Texto h1{
+    width: 94px;
+    height: 36px;
+    margin: 80px 0px 0px 50px;
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.main_Texto p{
+    width: 735px;
+    height: 195px;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    margin: 30px 0px 0px 90px;
+}
+
+
+ /* --------------------------- Parte Time-Line ---------------------------  */
+
+ .timeline-container {
+    position: relative;
+    top: 85px;
+    left: 500px;
+    width: 960px;
+}
+
+/* Linha horizontal */
+.timeline {
+    width: 100%;
+    height: 4px;
+    background: black;
+    position: absolute;
+    top: 150px;
+    left: 0;
+}
+
+/* Caixas */
+
+.block {
+    background: #2f5567;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 15px;
+    font-size: 17px;
+    position: absolute;
+    width: 120px;
+    height: 80px;
+}
+
+/* Posições das caixas */
+.sarney {
+    top: 160px;
+    left: 25px;
+}
+
+.collor {
+    top: 55px;
+    left: 290px;
+}
+
+.itamar {
+    top: 160px;
+    left: 525px;
+}
+
+.fhc {
+    top: 55px;
+    left: 765px;
+}
+
+/* Datas */
+.date {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.date-sarney { top: 125px; left: 45px; }
+.date-collor { top: 160px; left: 305px; }
+.date-itamar { top: 125px; left: 544px; }
+.date-fhc { top: 160px; left: 780px; }
+
+/* Linhas verticais */
+.vertical-line {
+    width: 4px;
+    height: 180px;
+    background: black;
+    position: absolute;
+    top: 35px;
+}
+
+.v1 { left: 15px; }
+.v2 {top: 15px; left: 280px; }
+.v3 { left: 510px; }
+.v4 {top: 15px; left: 739px; }
+
+/* Pontos */
+.dot {
+    width: 12px;
+    height: 12px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.d1 { top: 25px; left: 11px; }
+.d2 { top: 185px; left: 276px; }
+.d3 { top: 25px; left: 506px; }
+.d4 { top: 185px; left: 735px; }
+
+/* ------------- Animação quadrados presidentes -------------*/
+
+.block {
+    background: #2f5567;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 15px;
+    font-size: 17px;
+    position: absolute;
+
+    width: 120px;           /* largura normal */
+    height: 80px;           /* altura fixa */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;       /* impede a imagem de sair da caixa */
+    transition: width 0.3s ease;
+}
+
+/* Quando o hover ocorre, a caixa aumenta */
+.block:hover {
+    width: 200px;           /* cresce só para a direita */
+}
+
+/* Imagem escondida inicialmente */
+.img-hover {
+    height: 75px;
+    width: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Imagem aparece no hover */
+.block:hover .img-hover {
+    opacity: 1;
+}
+
